@@ -12,7 +12,7 @@
 
 ```javascript
 function fn() {  
-	var a = 1,
+  var a = 1,
       b = 2,
       sum = a + b,
       myobject = {},
@@ -114,10 +114,10 @@ console.log(typeof o.substring); // 'function'
 
 ```javascript
 var Person = function (name) {
-	this.name = name;
-	this.say = function () {
-		return "I am " + this.name;
-	};
+  this.name = name;
+  this.say = function () {
+    return "I am " + this.name;
+  };
 };
 
 var adam = new Person("Adam");
@@ -248,7 +248,7 @@ scareMe(); // Double boo!
 
 ```javascript
 (function (global) {
-	// access the global object via `global`
+  // access the global object via `global`
 }(this));
 ```
 
@@ -263,12 +263,12 @@ scareMe(); // Double boo!
 
 ```javascript
 var myFunc = function (param) {
-	if (!myFunc.cache[param]) {
-		var result = {};
-		// ... expensive operation ...
-		myFunc.cache[param] = result;
-	}
-	return myFunc.cache[param];
+  if (!myFunc.cache[param]) {
+    var result = {};
+    // ... expensive operation ...
+    myFunc.cache[param] = result;
+  }
+  return myFunc.cache[param];
 };
 // cache storage
 myFunc.cache = {};
@@ -363,25 +363,25 @@ myobj.getName(); // "my, oh my"
 var myarray;
 (function () {
   var astr = "[object Array]",
-  		toString = Object.prototype.toString;
+      toString = Object.prototype.toString;
   function isArray(a) {
-  	return toString.call(a) === astr;
+    return toString.call(a) === astr;
   }
   function indexOf(haystack, needle) {
-  	var i = 0,
-  			max = haystack.length;
-  	for (; i < max; i += 1) {
-  		if (haystack[i] === needle) {
-  			return i;
-  		}
-  	}
-  	return −1;
+    var i = 0,
+  	max = haystack.length;
+    for (; i < max; i += 1) {
+      if (haystack[i] === needle) {
+        return i;
+      }
+    }
+    return −1;
   }
- 	myarray = {
-		isArray: isArray,
-		indexOf: indexOf,
-		isArray: indexOf
-	};
+  myarray = {
+    isArray: isArray,
+    indexOf: indexOf,
+    isArray: indexOf
+  };
 })();
 ```
 
@@ -648,7 +648,7 @@ document.body.appendChild(frag);
 
 ```javascript
 var oldnode = document.getElementById('result'),
-		clone = oldnode.cloneNode(true);
+    clone = oldnode.cloneNode(true);
 // work with the clone...
 // ... and when you're done:
 oldnode.parentNode.replaceChild(clone, oldnode);
